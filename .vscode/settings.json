@@ -1,0 +1,7 @@
+{
+    "cmake.cmakePath": "${workspaceFolder}/script/conda_wrappers/cmake",
+    "cmake.ctestPath": "${workspaceFolder}/script/conda_wrappers/ctest",
+    "editor.rulers": [
+        72, 120
+    ]
+}

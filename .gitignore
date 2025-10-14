@@ -39,3 +39,8 @@
 
 # debug information files
 *.dwo
+
+/.conda_env
+/conda.en
+# /.vscode
+/script/conda_wrappers

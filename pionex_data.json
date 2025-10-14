@@ -1,0 +1,33 @@
+{"type": "ERROR", "code": "INVALID_SYMBOL", "message": "invalid `symbol`", "timestamp": 1753427476624}
+{"type": "SUBSCRIBED", "topic": "TRADE", "symbol": "ETH_BTC"}
+{"topic": "TRADE", "symbol": "ETH_BTC", "data": [{"symbol": "ETH_BTC", "tradeId": "200000000046942785", "price": "0.031365", "size": "0.0234", "side": "BUY", "timestamp": 1753462331902}], "timestamp": 1753462332021}
+{"topic": "TRADE", "symbol": "ETH_BTC", "data": [{"symbol": "ETH_BTC", "tradeId": "200000000046942786", "price": "0.031365", "size": "0.0199", "side": "SELL", "timestamp": 1753462332203}], "timestamp": 1753462332300}
+{"topic": "TRADE", "symbol": "ETH_BTC", "data": [{"symbol": "ETH_BTC", "tradeId": "200000000046942787", "price": "0.031365", "size": "0.0323", "side": "BUY", "timestamp": 1753462332503}], "timestamp": 1753462332623}
+{"topic": "TRADE", "symbol": "ETH_BTC", "data": [{"symbol": "ETH_BTC", "tradeId": "200000000046942788", "price": "0.031365", "size": "0.0021", "side": "SELL", "timestamp": 1753462339508}], "timestamp": 1753462339624}
+{"topic": "TRADE", "symbol": "ETH_BTC", "data": [{"symbol": "ETH_BTC", "tradeId": "200000000046942789", "price": "0.031365", "size": "0.0019", "side": "BUY", "timestamp": 1753462343509}], "timestamp": 1753462343612}
+{"topic": "TRADE", "symbol": "ETH_BTC", "data": [{"symbol": "ETH_BTC", "tradeId": "200000000046942790", "price": "0.031365", "size": "0.0048", "side": "SELL", "timestamp": 1753462343810}], "timestamp": 1753462343908}
+{"op": "PING", "timestamp": 1753462344870}
+{"topic": "TRADE", "symbol": "ETH_BTC", "data": [{"symbol": "ETH_BTC", "tradeId": "200000000046942791", "price": "0.031355", "size": "0.0114", "side": "BUY", "timestamp": 1753462347813}], "timestamp": 1753462347915}
+{"topic": "TRADE", "symbol": "ETH_BTC", "data": [{"symbol": "ETH_BTC", "tradeId": "200000000046942792", "price": "0.031355", "size": "0.0124", "side": "SELL", "timestamp": 1753462348114}], "timestamp": 1753462348217}
+{"topic": "TRADE", "symbol": "ETH_BTC", "data": [{"symbol": "ETH_BTC", "tradeId": "200000000046942793", "price": "0.031355", "size": "0.0152", "side": "BUY", "timestamp": 1753462348415}], "timestamp": 1753462348524}
+{"topic": "TRADE", "symbol": "ETH_BTC", "data": [{"symbol": "ETH_BTC", "tradeId": "200000000046942794", "price": "0.031355", "size": "0.0010", "side": "SELL", "timestamp": 1753462349415}], "timestamp": 1753462349539}
+{"topic": "TRADE", "symbol": "ETH_BTC", "data": [{"symbol": "ETH_BTC", "tradeId": "200000000046942795", "price": "0.031355", "size": "0.0013", "side": "BUY", "timestamp": 1753462349715}], "timestamp": 1753462349814}
+{"topic": "TRADE", "symbol": "ETH_BTC", "data": [{"symbol": "ETH_BTC", "tradeId": "200000000046942796", "price": "0.031355", "size": "0.0013", "side": "BUY", "timestamp": 1753462350018}], "timestamp": 1753462350120}
+{"topic": "TRADE", "symbol": "ETH_BTC", "data": [{"symbol": "ETH_BTC", "tradeId": "200000000046942797", "price": "0.031355", "size": "0.0015", "side": "BUY", "timestamp": 1753462353018}], "timestamp": 1753462353122}
+{"topic": "TRADE", "symbol": "ETH_BTC", "data": [{"symbol": "ETH_BTC", "tradeId": "200000000046942798", "price": "0.031360", "size": "0.0013", "side": "BUY", "timestamp": 1753462357021}], "timestamp": 1753462357122}
+{"topic": "TRADE", "symbol": "ETH_BTC", "data": [{"symbol": "ETH_BTC", "tradeId": "200000000046942799", "price": "0.031365", "size": "0.0013", "side": "BUY", "timestamp": 1753462357321}], "timestamp": 1753462357421}
+{"topic": "TRADE", "symbol": "ETH_BTC", "data": [{"symbol": "ETH_BTC", "tradeId": "200000000046942800", "price": "0.031365", "size": "0.0017", "side": "SELL", "timestamp": 1753462358322}], "timestamp": 1753462358425}
+{"topic": "TRADE", "symbol": "ETH_BTC", "data": [{"symbol": "ETH_BTC", "tradeId": "200000000046942801", "price": "0.031365", "size": "0.0015", "side": "SELL", "timestamp": 1753462358623}], "timestamp": 1753462358713}
+{"topic": "TRADE", "symbol": "ETH_BTC", "data": [{"symbol": "ETH_BTC", "tradeId": "200000000046942802", "price": "0.031365", "size": "0.0021", "side": "SELL", "timestamp": 1753462358923}], "timestamp": 1753462359025}
+{"op": "PING", "timestamp": 1753462359871}
+{"topic": "TRADE", "symbol": "ETH_BTC", "data": [{"symbol": "ETH_BTC", "tradeId": "200000000046942803", "price": "0.031355", "size": "0.0154", "side": "BUY", "timestamp": 1753462360925}], "timestamp": 1753462361025}
+{"topic": "TRADE", "symbol": "ETH_BTC", "data": [{"symbol": "ETH_BTC", "tradeId": "200000000046942804", "price": "0.031355", "size": "0.0065", "side": "BUY", "timestamp": 1753462361926}], "timestamp": 1753462362026}
+{"topic": "TRADE", "symbol": "ETH_BTC", "data": [{"symbol": "ETH_BTC", "tradeId": "200000000046942805", "price": "0.031355", "size": "0.0014", "side": "BUY", "timestamp": 1753462362927}], "timestamp": 1753462363025}
+{"topic": "TRADE", "symbol": "ETH_BTC", "data": [{"symbol": "ETH_BTC", "tradeId": "200000000046942806", "price": "0.031355", "size": "0.0100", "side": "SELL", "timestamp": 1753462366930}], "timestamp": 1753462367032}
+{"topic": "TRADE", "symbol": "ETH_BTC", "data": [{"symbol": "ETH_BTC", "tradeId": "200000000046942807", "price": "0.031355", "size": "0.0093", "side": "SELL", "timestamp": 1753462367231}], "timestamp": 1753462367347}
+{"topic": "TRADE", "symbol": "ETH_BTC", "data": [{"symbol": "ETH_BTC", "tradeId": "200000000046942808", "price": "0.031355", "size": "0.0072", "side": "BUY", "timestamp": 1753462367532}], "timestamp": 1753462367634}
+{"topic": "TRADE", "symbol": "ETH_BTC", "data": [{"symbol": "ETH_BTC", "tradeId": "200000000046942809", "price": "0.031355", "size": "0.0018", "side": "SELL", "timestamp": 1753462374534}], "timestamp": 1753462374634}
+{"op": "PING", "timestamp": 1753462374871}
+{"topic": "TRADE", "symbol": "ETH_BTC", "data": [{"symbol": "ETH_BTC", "tradeId": "200000000046942810", "price": "0.031355", "size": "0.0037", "side": "SELL", "timestamp": 1753462376536}], "timestamp": 1753462376638}
+{"topic": "TRADE", "symbol": "ETH_BTC", "data": [{"symbol": "ETH_BTC", "tradeId": "200000000046942811", "price": "0.031355", "size": "0.0032", "side": "SELL", "timestamp": 1753462383540}], "timestamp": 1753462383646}
+{"op": "CLOSE", "timestamp": 1753462389871, "note": "missed pong exceed max limit"}

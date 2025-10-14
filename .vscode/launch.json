@@ -1,0 +1,51 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python Debugger: Current File with Arguments",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "args": "${command:pickArgs}"
+        },
+        {
+            "name": "Python Debugger: TradeSimulator",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/script/trading_bot/main.py",
+            "console": "integratedTerminal",
+            "args": [ "--mode", "simulate" ]
+        },
+        {
+            "name": "Python Debugger: PionexRecorder",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/script/trading_bot/main.py",
+            "console": "integratedTerminal",
+            "args": [ "--mode", "record" ],
+            "cwd": "${workspaceFolder}/recording"
+        },
+        {
+            "name": "Python Debugger: PionexBacktest",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/script/trading_bot/main.py",
+            "console": "integratedTerminal",
+            "args": [ "--mode", "backtest", "--file", "${workspaceFolder}/recording/ETH_BTC.250809.190130.bin" ],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "name": "Python Debugger: Plotter",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/script/trading_bot/plotter.py",
+            "console": "integratedTerminal",
+            "args": [ "${workspaceFolder}/recording/ETH_BTC.250809.190130.bin" ],
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}

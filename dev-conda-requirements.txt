@@ -1,0 +1,10 @@
+# Conda package specification:
+python
+clang
+clangxx
+cmake
+conan
+aiohttp
+numpy
+pandas
+matplotlib
