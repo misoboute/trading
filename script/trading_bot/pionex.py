@@ -2,7 +2,8 @@ import asyncio
 import gzip
 import websockets
 import json
-from datetime import datetime, timedelta
+import logging
+from datetime import datetime, timezone
 
 # Objects of this class can be passed to the SimulationExchange as the data source. We'll implement this later.
 # The PionexMarketDataFeed class wraps the Pionex WebSocket API for market data.
@@ -16,21 +17,23 @@ class PionexMarketDataFeed:
         self.message_queue = asyncio.Queue()
 
     async def __aenter__(self):
+        logging.log(logging.INFO, "Entering PionexMarketDataFeed context")
         await self.connect()
         return self
 
     async def __aexit__(self, exc_type, exc_value, traceback):
+        logging.log(logging.INFO, "Exiting PionexMarketDataFeed context")
         await self.close()
         self.message_queue = asyncio.Queue()
 
     async def connect(self):
-        print("Connecting")
+        logging.log(logging.INFO, "Connecting")
         self.websocket = await websockets.connect(self.public_websocket_url)
         self.polling_task = asyncio.create_task(self._poll_messages())
-        print("Connected; started polling messages")
+        logging.log(logging.INFO, "Connected; started polling messages")
 
     async def close(self):
-        print("Closing connection")
+        logging.log(logging.INFO, "Closing connection")
         if self.polling_task:
             self.polling_task.cancel()
             try:
@@ -69,7 +72,7 @@ class PionexMarketDataFeed:
                 message = await self.websocket.recv()
                 await self.message_queue.put(message)
             except Exception as e:
-                print(f"Polling error: {e}")
+                logging.log(logging.ERROR, f"Polling error: {e}")
                 break
             await asyncio.sleep(0.1)
 
@@ -80,7 +83,7 @@ class PionexMarketDataFeed:
             if self.polling_task.cancelled():
                 raise asyncio.CancelledError()
             if self.polling_task.exception():
-                print("Polling task ended with an exception.")
+                logging.log(logging.ERROR, "Polling task ended with an exception.")
                 raise self.polling_task.exception()
         while not self.message_queue.empty():
             message = await self.message_queue.get()
@@ -92,10 +95,10 @@ class PionexMarketDataFeed:
             if data.get("op") == "PING":
                 await self.websocket.send(json.dumps({"op": "PONG", "timestamp": data.get("timestamp")}))
             elif type in ["SUBSCRIBED", "UNSUBSCRIBED"]:
-                print(f"Received {type} confirmation for {topic} on {symbol}")
+                logging.log(logging.INFO, f"Received {type} confirmation for {topic} on {symbol}")
             elif topic == "TRADE" and symbol in self.trade_callbacks:
                 trades = [{
-                    'time': datetime.fromtimestamp(trade["time"] / 1000.0, tz=datetime.timezone.utc),
+                    'time': datetime.fromtimestamp(trade["timestamp"] / 1000.0, tz=timezone.utc),
                     'price': float(trade["price"]),
                     'size': float(trade["size"]),
                     'side': trade["side"]} for trade in data.get("data", [])]
@@ -106,7 +109,7 @@ class PionexMarketDataFeed:
                 bids = [(float(b[0]), float(b[1])) for b in orders['bids']]
                 asks = [(float(a[0]), float(a[1])) for a in orders['asks']]
                 for cb in self.depth_callbacks[symbol]:
-                    cb(bids, asks, datetime.fromtimestamp(data["timestamp"] / 1000.0, tz=datetime.timezone.utc))
+                    cb(bids, asks, datetime.fromtimestamp(data["timestamp"] / 1000.0, tz=timezone.utc))
                 continue
             else:
-                print(f"Unhandled message: {data}") 
+                logging.log(logging.WARN, f"Unhandled message: {data}") 
