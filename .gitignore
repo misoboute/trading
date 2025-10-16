@@ -44,3 +44,5 @@
 /conda.en
 # /.vscode
 /script/conda_wrappers
+**/__pycache__/
+**/*.pyc

@@ -7,7 +7,7 @@ set -eu -o pipefail
 ! getopt --test
 [ ${PIPESTATUS[0]} -ne 4 ] && echo "enhanced getopt not found; cannot continue" && exit 1
 
-parsed_args="$(getopt -o p:e:h:u --long conda-env-path:,conda-home:,help,no-update -- "$@")"
+parsed_args="$(getopt -o p:e:hu --long conda-env-path:,conda-home:,help,no-update -- "$@")"
 [[ $? -ne 0 ]] && echo "Failed to parse options" && exit 1
 
 eval set -- "$parsed_args"
